@@ -1,0 +1,364 @@
+/*
+Theme Name: Muraple
+Author: Mikhail Tyuftyaev
+Author URI: http://tyuftyaev.ru/
+*/
+
+/* ----------------------
+*	Header
+---------------------------*/
+.logo{
+    height: 29px;
+    width: 160px;
+    background-image: url('./img/Logo.svg');
+    background-repeat: no-repeat;
+}
+
+
+/* ----------------------
+*	Slider for main page
+---------------------------*/
+.slider{
+    position: relative;
+    min-width: 0;
+}
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/* Слайд */
+.slider__item img{
+    margin: 10px 0 55px;
+    height: 550px;
+    box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
+}
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slider .slick-arrow,
+.slider .slick-arrow:focus,
+.slider .slick-arrow:active,
+.slider .slick-arrow:link,
+.slider .slick-arrow:visited{
+    position: absolute;
+    display: inline-block;
+    width: 70px;
+    height: 80px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    top: 50%;
+    z-index: 1;
+    font-size: 0;
+    padding: 0;
+    border: none;
+    outline:none;
+}
+/* Стрелка влево */
+.slider .slick-arrow.slick-prev{
+    background-image: url('./img/dashicons-arrow-left-alt2.svg');
+    left: 0;
+}
+/* Стрелка вправо */
+.slider .slick-arrow.slick-next{
+    background-image: url('./img/dashicons-arrow-right-alt2.svg');
+    right: 0;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+/* .slider {
+    position: relative;
+    overflow: hidden;
+  } */
+
+  /* .slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+
+  .slider__item {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .slider__item img{
+    margin: 10px 0 55px;
+    height: 550px;
+    box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
+  }
+
+  .slider__control {
+    position: absolute;
+    top: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    transform: translateY(-50%);
+     -webkit-transition: all 0.4s ease-out;
+   -moz-transition: all 0.4s ease-out;
+   -o-transition: all 0.4s ease-out;
+   transition: all 0.4s ease-out;
+  }
+
+  .slider__control_show {
+    display: flex;
+  }
+
+  .slider__control:hover,
+  .slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .3;
+  }
+
+  .slider__control_left {
+    left: 10%;
+  }
+
+  .slider__control_right {
+    right: 10%;
+  }
+
+  .slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 70px;
+    height: 80px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+
+  }
+
+  .slider__control_left::before {
+    background-image: url('./img/dashicons-arrow-left-alt2.svg');
+  }
+
+  .slider__control_right::before {
+    background-image: url('./img/dashicons-arrow-right-alt2.svg');
+  } */
+
+
+
+/* ----------------------
+*	Single post
+---------------------------*/
+.single-post{
+    margin: 150px auto;
+}
+.single-post .entry-title {
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    line-height: 160%;
+    color: #474747;
+}
+
+.single-post .meta{
+    position: relative;
+    margin: 12px 0 48px;
+}
+
+.single-post img{
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 24px;
+}
+
+
+.single-post .meta span{
+    margin-right: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 160%;
+    color: #777777;
+    
+}
+
+.single-post .meta .category {
+    background: #ffffff;
+    padding: 0px 12px;
+    font-size: 12px;
+    line-height: 1.6;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.single-post .meta .date {
+    padding-left: 20px;
+    background: url(img/calendar.svg) no-repeat 50% 50%;
+    background-size: 12px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+.single-post .meta .comments {
+    padding-left: 20px;
+    background: url(img/comments.svg) no-repeat 50% 50%;
+    background-size: 12px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+.single-post .meta .views {
+    padding-left: 20px;
+    background: url(img/views.svg) no-repeat 50% 50%;
+    background-size: 14px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+.single-post .meta .a2a_kit{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.single-post .meta .addtoany_list a img{
+    vertical-align: middle;
+}
+
+.single-post p{
+    font-size: 16px;
+    line-height: 160%;
+    text-align: justify;
+    color: #474747;
+}
+
+.tagList{
+    display: flex;
+    margin-top: 64px;
+}
+
+.tagItem {
+    display: inline-block;
+    background-color: #F4F4F4;
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+}
+
+.tagItem a{
+    padding: 8px 16px 10px;
+    display: block;
+    font-size: 14px;
+    color: #474747;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+.tagItem a:hover{
+    text-decoration: underline;
+}
+.tagLine{
+    width: 70%;
+}
+.tagShare{
+    width: 30%;
+}
+
+
+.addtoany_list a img{
+    margin-bottom: 0;
+}
+
+.a2a_kit {
+    float: right !important;
+}
+
+.single-post .meta .a2a_kit a span {
+    margin-right: 0px;
+}
+
+.tagShare .a2a_kit {
+    margin: 4px 0;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .logo{
+        height: 29px;
+        width: 64px;
+        background-image: url(./img/small-logo.svg);
+    }
+
+    .single-post{
+        margin: 100px auto;
+    }
+
+    .tagLine{
+        margin-bottom: 24px;
+    }
+
+    .tagList{
+        display: block;
+    }
+
+    .tagShare {
+        width: 100%;
+    }
+
+    .a2a_kit {
+        float: left !important;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+    .single-post .meta .a2a_kit {
+        margin-top: 24px;
+        display: block;
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: 0;
+        float: none !important;
+    }
+}
+
+@media (max-width: 376px) {
+    .single-post .meta .comments {
+        display: none;
+    }
+    
+    .single-post .meta .views {
+        display: none;
+    }
+    
+}
