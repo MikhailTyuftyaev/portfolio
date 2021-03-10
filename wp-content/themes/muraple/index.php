@@ -411,72 +411,36 @@
             <div class="owl-carousel" data-items="2" data-nav-dots="true" data-md-items="2" data-sm-items="1"
                 data-xs-items="1" data-xx-items="1" data-space="30">
                 <!-- testimonials -->
-                <div class="testimonial-col-01">
-                    <div class="media">
-                        <div class="img">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/team-1.jpg" title="" alt="">
-                        </div>
-                        <div class="media-body p-25px-l">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <div class="tc-info">
-                                <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                <span>Co-founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- / -->
-                <!-- testimonials -->
-                <div class="testimonial-col-01">
-                    <div class="media">
-                        <div class="img">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/team-2.jpg" title="" alt="">
-                        </div>
-                        <div class="media-body p-25px-l">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <div class="tc-info">
-                                <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                <span>Co-founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- / -->
-                <!-- testimonials -->
-                <div class="testimonial-col-01">
-                    <div class="media">
-                        <div class="img">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/team-3.jpg" title="" alt="">
-                        </div>
-                        <div class="media-body p-25px-l">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <div class="tc-info">
-                                <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                <span>Co-founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- / -->
-                <!-- testimonials -->
-                <div class="testimonial-col-01">
-                    <div class="media">
-                        <div class="img">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/team-4.jpg" title="" alt="">
-                        </div>
-                        <div class="media-body p-25px-l">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                            <div class="tc-info">
-                                <h6 class="font-alt dark-color font-w-600">Nancy Bayers</h6>
-                                <span>Co-founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                        // Request
+
+                        $args = [
+                        'post_type' => 'testimonial',
+                        'post_status' => 'publish',
+                        'orderby' => 'date',
+                        'order'   => 'DESC'
+                        ];
+
+                        $wp_query = new WP_Query($args); ?>
+
+                        <?php if ($wp_query->have_posts()) : ?>
+                            <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                             <div class="testimonial-col-01">
+                                <div class="media">
+                                    <div class="img" style="background-image: url('<?php echo get_field('avatar-clients')?>')">
+                                    </div>
+                                    <div class="media-body p-25px-l">
+                                        <?php echo the_content(); ?>
+                                        <div class="tc-info">
+                                            <h6 class="font-alt dark-color font-w-600"><?php the_title(); ?></h6>
+                                            <span><?php echo get_field('vacancy') ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                             
+                            <?php endwhile;?>
+                        <?php endif; ?>
+                        <?php wp_reset_postdata(); ?> 
                 <!-- / -->
             </div>
         </div>

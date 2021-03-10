@@ -225,6 +225,15 @@ Author URI: http://tyuftyaev.ru/
     margin: 4px 0;
 }
 
+/* ----------------------
+*	Testimonials
+---------------------------*/
+
+.testimonial-col-01 .img{
+    background-size: cover;
+}
+
+
 @media (max-width: 1200px) {
     .slider__item img{
         height: 450px;
