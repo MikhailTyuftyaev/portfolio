@@ -1,5 +1,8 @@
 jQuery(function($){
   $(document).ready(function(){
-    $('.slider').slick();
+    $('.slider').slick({
+      infinite: false,
+      swipe: true
+    });
   });
 });

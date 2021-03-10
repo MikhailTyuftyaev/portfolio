@@ -21,14 +21,14 @@ Author URI: http://tyuftyaev.ru/
 .slider{
     position: relative;
     min-width: 0;
+    padding: 0;
+    margin: 15px 0 0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
-/* Слайдер */
-.slick-slider{}
-/* Слайдер запущен */
-.slick-slider.slick-initialized{}
-/* Слайдер с точками */
-.slick-slider.slick-dotted{}
-/* Ограничивающая оболочка */
 .slick-list {
     overflow: hidden;
 }
@@ -48,16 +48,9 @@ Author URI: http://tyuftyaev.ru/
     height: 550px;
     box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
 }
-.slick-slide{}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active{}
-/* Слайд основной */
-.slick-slide.slick-current{}
-/* Слайд по центру */
-.slick-slide.slick-center{}
-/* Клонированный слайд */
-.slick-slide.slick-cloned{}
-/* Стрелка */
+.slick-slide{
+    outline: none;
+}
 .slider .slick-arrow,
 .slider .slick-arrow:focus,
 .slider .slick-arrow:active,
@@ -73,8 +66,14 @@ Author URI: http://tyuftyaev.ru/
     z-index: 1;
     font-size: 0;
     padding: 0;
+    margin-top: -40px;
     border: none;
     outline:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 /* Стрелка влево */
 .slider .slick-arrow.slick-prev{
@@ -87,90 +86,9 @@ Author URI: http://tyuftyaev.ru/
     right: 0;
 }
 /* Стрелка не активная */
-.slick-arrow.slick-disabled{}
-/* Точки (булиты) */
-.slick-dots{}
-.slick-dots li{}
-/* Активная точка */
-.slick-dots li.slick-active{}
-/* Элемент точки */
-.slick-dots li button{}
-
-/* .slider {
-    position: relative;
-    overflow: hidden;
-  } */
-
-  /* .slider__wrapper {
-    display: flex;
-    transition: transform 0.6s ease;
-  }
-
-  .slider__item {
-    flex: 0 0 100%;
-    text-align: center;
-  }
-  .slider__item img{
-    margin: 10px 0 55px;
-    height: 550px;
-    box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
-  }
-
-  .slider__control {
-    position: absolute;
-    top: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    transform: translateY(-50%);
-     -webkit-transition: all 0.4s ease-out;
-   -moz-transition: all 0.4s ease-out;
-   -o-transition: all 0.4s ease-out;
-   transition: all 0.4s ease-out;
-  }
-
-  .slider__control_show {
-    display: flex;
-  }
-
-  .slider__control:hover,
-  .slider__control:focus {
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
+.slick-arrow.slick-disabled{
     opacity: .3;
-  }
-
-  .slider__control_left {
-    left: 10%;
-  }
-
-  .slider__control_right {
-    right: 10%;
-  }
-
-  .slider__control::before {
-    content: '';
-    display: inline-block;
-    width: 70px;
-    height: 80px;
-    background: transparent no-repeat center center;
-    background-size: 100% 100%;
-
-  }
-
-  .slider__control_left::before {
-    background-image: url('./img/dashicons-arrow-left-alt2.svg');
-  }
-
-  .slider__control_right::before {
-    background-image: url('./img/dashicons-arrow-right-alt2.svg');
-  } */
-
-
-
+}
 /* ----------------------
 *	Single post
 ---------------------------*/
@@ -307,7 +225,16 @@ Author URI: http://tyuftyaev.ru/
     margin: 4px 0;
 }
 
-
+@media (max-width: 1200px) {
+    .slider__item img{
+        height: 450px;
+    }
+}
+@media (max-width: 992px) {
+    .slider__item img{
+        height: 400px;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -335,6 +262,13 @@ Author URI: http://tyuftyaev.ru/
 
     .a2a_kit {
         float: left !important;
+    }
+    .slider__item img{
+        height: auto;
+        box-shadow: none;
+    }
+    .slider__item{
+        padding: 0 15px;
     }
 
 }
